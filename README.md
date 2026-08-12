@@ -2,7 +2,9 @@
 
 An AI-powered weather advisor for plein-air sketching: every morning at 8:00 it fetches the hourly forecast for Kraków (Open-Meteo), asks Claude to find the best 2-hour window for watercolor sketching outdoors, and sends an email — either with a recommended spot or an honest "skip today".
 
-The full story of how this workflow came to be — including the three traps I fell into along the way (`[object Object]`, empty content from a thinking-enabled model, and JSON wrapped in markdown fences) — is described on my blog (in Polish): **[programistka.com — link to the post]**.
+![Workflow architecture: eight nodes from Daily at 8:00 through Claude to GOOD/SKIP emails](images/architecture.png)
+
+The full story of how this workflow came to be — including the three traps I fell into along the way (`[object Object]`, empty content from a thinking-enabled model, and JSON wrapped in markdown fences) — is described on my blog (in Polish): **[programistka.com/n8n-doradca-pogodowy-claude](https://programistka.com/n8n-doradca-pogodowy-claude/)**.
 
 ## 📦 What's inside
 
@@ -17,6 +19,8 @@ The full story of how this workflow came to be — including the three traps I f
 - **SMTP for sending emails** — e.g. Gmail with an App Password ([myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords), requires 2FA)
 
 Open-Meteo requires no key and no registration (for non-commercial use).
+
+![The imported workflow on the n8n canvas — all eight nodes connected](images/workflow-canvas.png)
 
 ## 🚀 Import in three steps
 
@@ -36,4 +40,4 @@ One run per day is a single Claude Sonnet 4.6 call on a short prompt — pennies
 
 ## ❓ Questions
 
-Leave a comment under the blog post at [programistka.com](https://programistka.com) 💬
+Leave a comment under [the blog post](https://programistka.com/n8n-doradca-pogodowy-claude/) 💬
